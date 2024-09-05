@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img>
+            <ul>
+                <li><a herf="#">Home</a></li>
+                <li><a herf="#">About</a></li>
+                <li><a herf="#">Resume</a></li>
+                <li><a herf="#">Portfolio</a></li>
+                <li><a herf="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p></p>
+                <h1>Hi I'm <span>Wesley</span> Duong</h1> 
+        </div>
+    </div>
+</div>
+<!------about------>
+
+<div class="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> I've recently graduated from university and provided me with a strong theoretical understanding and have practical
+                    experience in creating games and developing robotics applications. I'm eager to gain valuable work experience in software
+                    engineering.</p>
+
+                <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skill</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Game Design</span><br>Game Program</li>
+                        <li><span>C++</span><br>Game Program</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Job</span><br>Freelance</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>School</span><br>CSUSB</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+
+<!--Services-->
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
